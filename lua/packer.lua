@@ -191,6 +191,11 @@ manage = function(plugin_data)
   end
 
   local log = require_and_configure 'log'
+
+  vim.pretty_print(plugin_data)
+
+  vim.pretty_print(plugin_spec)
+
   if plugin_spec[1] == vim.NIL or plugin_spec[1] == nil then
     log.warn('No plugin name provided at line ' .. spec_line .. '!')
     return
