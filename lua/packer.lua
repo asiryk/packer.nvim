@@ -192,6 +192,10 @@ manage = function(plugin_data)
 
   local log = require_and_configure 'log'
 
+  print(debug.traceback("Stack trace"))
+  print(debug.getinfo(1))
+  print("Stack trace end")
+
   vim.pretty_print(plugin_data)
 
   vim.pretty_print(plugin_spec)
