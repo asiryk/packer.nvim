@@ -334,6 +334,10 @@ end
 local function manage_all_plugins()
   local log = require_and_configure 'log'
   log.debug 'Processing plugin specs'
+
+  print("manage all plugins")
+  vim.pretty_print(plugins)
+
   if plugins == nil or next(plugins) == nil then
     for _, spec in ipairs(plugin_specifications) do
       manage(spec)
